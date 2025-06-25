@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "mogumogu",
+	"version": "${version}",
+
+	"name": "もぐもぐmod",
+	"description": "満腹度が設定値以下になったら自動的に食料を食べるクライアント側のMod",
+	"authors": [
+		"Sim_256"
+	],
+	"contact": {
+		"sources": "https://github.com/yourusername/mogumogu"
+	},
+
+	"license": "MIT",
+	"icon": "assets/mogumogu/icon.png",
+
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.example.mogumogu.client.MogumoguClient"
+		],
+		"modmenu": [
+			"com.example.mogumogu.client.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"mogumogu.mixins.json"
+	],
+
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"fabric-api": "*",
+		"minecraft": "~1.19.4",
+		"java": ">=17"
+	},
+	"suggests": {
+		"modmenu": "*",
+		"cloth-config": "*"
+	}
+}
