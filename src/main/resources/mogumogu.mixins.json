@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "com.example.mogumogu.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"ItemUseMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"client": [
+		"ItemUseMixin"
+	]
+}
