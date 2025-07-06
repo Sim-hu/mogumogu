@@ -61,9 +61,9 @@ public class MogumoguClient implements ClientModInitializer {
             eatCooldown--;
         }
 
-        // 3秒おきにチェック
+        // 1tickごとにチェック（即時反応）
         tickCounter++;
-        if (tickCounter >= 60) { // 60ティック = 3秒
+        if (tickCounter >= 1) { // 1ティックごと
             tickCounter = 0;
             if (CONFIG.isEnabled() && eatCooldown == 0) {
                 processAutoEat(client);
